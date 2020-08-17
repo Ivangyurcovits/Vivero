@@ -1,4 +1,4 @@
-const URL_VIVERO = "https://er7136.github.io/Vivero/listado.json";
+const URL_VIVERO = "https://ivangyurcovits.github.io/Vivero/listado.json";
 
 
 var getJSONData = function(url) {
