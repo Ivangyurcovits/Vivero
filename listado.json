@@ -1,0 +1,25 @@
+[{
+    "id": "1",
+    "nombre": "Eucalipto",
+    "nomcient": "Eucalyptus",
+    "origen": "Australia",
+    "altura": "2 mts",
+    "edad": "1"
+},
+{
+    "id": "2",
+    "nombre": "Longeva",
+    "nomcient": "Pino longaeva",
+    "origen": "EEUU",
+    "altura": "3 mts",
+    "edad": "5"
+},
+{
+    "id": "3",
+    "nombre": "Plátano",
+    "nomcient": "Platanus",
+    "origen": "España",
+    "altura": "2 mts",
+    "edad": "4"
+}
+]
