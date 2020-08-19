@@ -28,6 +28,19 @@ document.addEventListener("DOMContentLoaded", function(e) {
         if (resultObj.status === "ok") {
             viveroArray = resultObj.data;
             showVivero(viveroArray);
+        }else{
+            maxEdad = undefined;
         }
+        showVivero(viveroArray);
     });
+    document.getElementById("limpiar").addEventListener("click", function(){
+        document.getElementById("rango-min").value = "";
+        document.getElementById("rango-miax").value = "";
+
+        minEdad = undefined;
+        maxEdad = undefined;
+
+        showVivero(viveroArray);
+    })
+
 });

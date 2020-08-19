@@ -22,3 +22,20 @@ var getJSONData = function(url) {
             return result;
         });
 }
+
+document.addEventListener("DOMContentLoaded", function (e){
+    let userLogged = localStorage.getItem('User-Logged');
+    let infoUser = document.getElementById("info-user");
+    let user = document.getElementById("user");
+
+    if (userLogged) {
+        userLogged = JSON.parse(userLogged);
+        user.innerText = user.innerText + 'Usuario logueado: ' + userLogged.email;
+        infoUser.style = "display: inline-block";
+    }
+
+    document.getElementById("salir").addEventListener("click", function(){
+        localStorage.removeItem('User-Logged');
+        window.location = 'login.html';
+    })
+});

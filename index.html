@@ -8,15 +8,26 @@
 </head>
 
 <body>
+
+    <div id="info-user" style="display: none;">
+        <p id="user">
+        </p><br>
+        <button id="salir">Salir</button>
+    </div>
+
     <h2>Plantas actualmente disponibles en el vivero:</h2>
     <div>
+        <button></button>
+        <button></button>
+        <button></button>
         <h3>Edad:</h3>
         <label for="minEdad">Entre</label>
-        <input type="number" class= "minEdad">
+        <input type="number" class= "minEdad" placeholder="min." id="rango-min">
         <label for="maxEdad">y</label>
-        <input type="number" class="maxEdad">
+        <input type="number" class="maxEdad" placeholder="max." id="rango-max">
 
-        <input type="button" class="" value="Filtrar" click="">
+        <button id="filtrar">Filtrar</button>
+        <button id="limpiar">Limpiar</button>
 
     </div>
     <div id="listado"></div>
