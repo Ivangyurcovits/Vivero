@@ -1,9 +1,7 @@
-var USUARIOS_URL = "https://danielk2020.github.io/biblioteca/usuarios.json";
-
 var usersArray = [];
 function validateUser (array, userIn, passwordIn){
     for(let i = 0; i < array.length; i++){
-        let usuario = array [i];
+        let usuario = array[i];
         if (usuario.email == userIn && usuario.password == passwordIn){
             return true;
         }
@@ -14,6 +12,7 @@ function validateUser (array, userIn, passwordIn){
 
 document.addEventListener("DOMContentLoaded", function(e){
     document.getElementById("submitBtn").addEventListener("click", function(e){
+        
         let inputEmail = document.getElementById("inputEmail");
         let inputPassword = document.getElementById("inputPassword");
         let camposCompletos = true;
@@ -33,6 +32,9 @@ document.addEventListener("DOMContentLoaded", function(e){
                 if (resultObj.status === "ok") {
                     usersArray = resultObj.data;
                     if (validateUser(usersArray, inputEmail.value, inputPassword.value) ) {
+                        
+                        localStorage.setItem('User-Logged', JSON.stringify({email: inputEmail.value}));
+                        
                         window.location = 'index.html';
                     }else{
                         alert("Usuario o contraseña incorrectas!");

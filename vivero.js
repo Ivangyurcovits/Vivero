@@ -1,9 +1,30 @@
-var viveroArray = [];
+const ORDER_ASC_BY_AGE = "edad -> EDAD";
+const ORDER_DESC_BY_AGE = "EDAD -> edad";
 
+
+var plantasArray = [];
 var minEdad = undefined;
 var maxEdad = undefined;
 
-function showVivero(array) {
+function sortPlantas(criterio, array) {
+    let result = [];
+    if (criterio === ORDER_ASC_BY_AGE) {
+        result = array.sort(function (a,b) {
+            if (a.edad < b.edad) {return -1;}
+            if (a.edad > b.edad) {return 1;}
+            return 0;
+        });
+    }else if(criterio === ORDER_DESC_BY_AGE) {
+        result = array.sort(function (a,b){
+            if (a.edad > b.edad) {return -1;}
+            if (a.edad < b.edad) {return 1;}
+            return 0;
+        });
+    }
+    return result;
+}
+
+function showPlantas(array) {
 
     let contenido = "";
     for (let i = 0; i < array.length; i++) {
@@ -26,21 +47,48 @@ function showVivero(array) {
 document.addEventListener("DOMContentLoaded", function(e) {
     getJSONData(URL_VIVERO).then(function(resultObj) {
         if (resultObj.status === "ok") {
-            viveroArray = resultObj.data;
-            showVivero(viveroArray);
+            plantasArray = resultObj.data;
+
+            plantasArray = sortPlantas(ORDER_DESC_BY_AGE, plantasArray);
+
+            showPlantas(plantasArray);
+        }
+    });
+
+    document.getElementById("sortEdadAsc").addEventListener("click", function (){
+        plantasArray = sortPlantas(ORDER_ASC_BY_AGE, plantasArray);
+        showPlantas(plantasArray);
+    })
+
+    document.getElementById("sortEdadDesc").addEventListener("click", function(){
+        plantasArray = sortPlantas(ORDER_DESC_BY_AGE, plantasArray);
+        showPlantas(plantasArray);
+    })
+
+    document.getElementById("filtrar").addEventListener("click", function(){
+
+        minEdad = document.getElementById("rango-min").value;
+        maxEdad = document.getElementById("rango-max").value;
+        if((minEdad != undefined) && (minEdad != "") && (parseInt(minEdad)) >= 0){
+            minEdad = parseInt(minEdad);
+        }else{
+            minEdad = undefined;
+        }
+        if((maxEdad != undefined) && (maxEdad != "") && (parseInt(maxEdad)) >= 0){
+            maxEdad = parseInt(maxEdad);
         }else{
             maxEdad = undefined;
         }
-        showVivero(viveroArray);
+        showPlantas(plantasArray);
     });
     document.getElementById("limpiar").addEventListener("click", function(){
         document.getElementById("rango-min").value = "";
-        document.getElementById("rango-miax").value = "";
+        document.getElementById("rango-max").value = "";
 
         minEdad = undefined;
         maxEdad = undefined;
 
-        showVivero(viveroArray);
+        showPlantas(plantasArray);
     })
 
 });

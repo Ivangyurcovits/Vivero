@@ -1,5 +1,5 @@
 const URL_VIVERO = "https://ivangyurcovits.github.io/Vivero/listado.json";
-
+var USUARIOS_URL = "https://danielk2020.github.io/biblioteca/usuarios.json";
 
 var getJSONData = function(url) {
     var result = {};
@@ -23,6 +23,7 @@ var getJSONData = function(url) {
         });
 }
 
+
 document.addEventListener("DOMContentLoaded", function (e){
     let userLogged = localStorage.getItem('User-Logged');
     let infoUser = document.getElementById("info-user");
@@ -31,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function (e){
     if (userLogged) {
         userLogged = JSON.parse(userLogged);
         user.innerText = user.innerText + 'Usuario logueado: ' + userLogged.email;
-        infoUser.style = "display: inline-block";
+        infoUser.style = "display: inline-block;";
     }
 
     document.getElementById("salir").addEventListener("click", function(){
