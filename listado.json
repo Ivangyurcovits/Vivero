@@ -1,23 +1,23 @@
 [{
     "id": "1",
-    "nombre": "Eucalipto",
-    "nomcient": "Eucalyptus",
+    "nombre": "Eucalipto Rojo",
+    "nomcient": "Eucalyptus ficifolia",
     "origen": "Australia",
     "altura": "2 mts",
     "edad": "1"
 },
 {
     "id": "2",
-    "nombre": "Longeva",
-    "nomcient": "Pino longaeva",
+    "nombre": "Pino Longevo",
+    "nomcient": "Pinus longaeva",
     "origen": "EEUU",
     "altura": "3 mts",
     "edad": "5"
 },
 {
     "id": "3",
-    "nombre": "Plátano",
-    "nomcient": "Platanus",
+    "nombre": "Platano de Sombra",
+    "nomcient": "Platanus × hispanica",
     "origen": "España",
     "altura": "2 mts",
     "edad": "4"
