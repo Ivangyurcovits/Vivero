@@ -22,7 +22,7 @@ function showPlantas(array, comentarioArray){
                 if (comentarioArray[comment].id_planta == verPlanta.plantaId){
                     comments += '<strong>'+ comentarioArray[comment].user +'</strong> dijo: <br>';
                     comments += '<p>'+ comentarioArray[comment].comentario +'</p><br>';
-                    comments += 'Calificación  <strong>'+ comentarioArray[comment].calificacion +'</strong>';
+                    comments += 'Calificación  <strong>'+ comentarioArray[comment].calificacion +'</strong>/5<br>';
                     comments += '<br><hr>'
                 }
             }
@@ -38,7 +38,7 @@ function showPlantas(array, comentarioArray){
 
 document.addEventListener("DOMContentLoaded", function (e) {
     getJSONData(COMENTARIOS_URL).then(function(resultObj){
-        if (resultobj.status === "ok") {
+        if (resultObj.status === "ok") {
             commentsArray = resultObj.data;            
         }
     });
