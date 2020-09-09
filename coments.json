@@ -1,0 +1,58 @@
+[
+    {
+        "id_planta": 1,
+        "calificacion": 5,
+        "comentario": "Hermosa planta!!",
+        "user": "fulana@mail.com"
+    },
+    {
+        "id_planta": 1,
+        "calificacion": 3,
+        "comentario": "Muy comun, ni fu ni fa",
+        "user": "mengano@mail.com"
+    },
+    {
+        "id_planta": 1,
+        "calificacion": 2,
+        "comentario": "No la elegiría",
+        "user": "sultano@mail.com"
+    },
+    
+    {
+        "id_planta": 2,
+        "calificacion": 5,
+        "comentario": "Hermosa planta!!",
+        "user": "fulana@mail.com"
+    },
+    {
+        "id_planta": 2,
+        "calificacion": 3,
+        "comentario": "Muy comun, ni fu ni fa",
+        "user": "mengano@mail.com"
+    },
+    {
+        "id_planta": 2,
+        "calificacion": 2,
+        "comentario": "No la elegiría",
+        "user": "sultano@mail.com"
+    },
+    
+    {
+        "id_planta": 3,
+        "calificacion": 5,
+        "comentario": "Hermosa planta!!",
+        "user": "fulana@mail.com"
+    },
+    {
+        "id_planta": 3,
+        "calificacion": 3,
+        "comentario": "Muy comun, ni fu ni fa",
+        "user": "mengano@mail.com"
+    },
+    {
+        "id_planta": 3,
+        "calificacion": 2,
+        "comentario": "No la elegiría",
+        "user": "sultano@mail.com"
+    }
+]
