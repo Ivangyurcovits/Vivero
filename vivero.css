@@ -37,3 +37,7 @@ div:hover{
     float: initial;
     padding: 5px;
 }
+
+.checked {
+    color: darkorange;
+  }
