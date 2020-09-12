@@ -21,14 +21,14 @@ function showPlantas(array, comentarioArray) {
             commentsArray.forEach(function (comment) {
                 let puntos = "";
                 if (comment.id_planta == verPlanta.plantaId) {
-                    comments += '<strong>'+ comment.user +'</strong> dijo: <br> <p>'+ comment.comentario +'</p>';
+                    comments += '<strong>' + comment.user + '</strong> dijo: <br> <p>' + comment.comentario + '</p>';
                     for (let i = 1; i <= comment.calificacion; i++) {
                         puntos += '<span class="fa fa-star checked"></span>';
                     }
                     for (let i = comment.calificacion + 1; i <= 5; i++) {
                         puntos += '<span class="fa fa-star"></span>';
                     }
-                    comments += '<div style="text-align: right;">'+ puntos +'</div><br><hr>';
+                    comments += '<div style="text-align: right;">' + puntos + '</div><br><hr>';
                 }
             });
 
@@ -54,4 +54,16 @@ document.addEventListener("DOMContentLoaded", function (e) {
             showPlantas(plantasArray, commentsArray);
         }
     });
+    document.getElementById("enviarComm").addEventListener("click", function () {
+        let newComment = {
+            id_planta: JSON.parse(localStorage.getItem('planta')).plantaId,
+            calificacion: parseInt(document.getElementById('newCal').value),
+            comentario: document.getElementById('newComm').value,
+            user: JSON.parse(localStorage.getItem('User-Logged')).email
+        };
+
+        commentsArray.push(newComment);
+        showPlantas(plantasArray, commentsArray);
+
+    })
 });

@@ -4,7 +4,8 @@
     "nomcient": "Eucalyptus ficifolia",
     "origen": "Australia",
     "altura": "2 mts",
-    "edad": "1"
+    "edad": "1",
+    "plantasSimilares": []
 },
 {
     "id": "2",
@@ -12,7 +13,8 @@
     "nomcient": "Pinus longaeva",
     "origen": "EEUU",
     "altura": "3 mts",
-    "edad": "5"
+    "edad": "5",
+    "plantasSimilares": [2]
 },
 {
     "id": "3",
@@ -20,6 +22,7 @@
     "nomcient": "Platanus × hispanica",
     "origen": "España",
     "altura": "2 mts",
-    "edad": "4"
+    "edad": "4",
+    "plantasSimilares": [1]
 }
 ]
