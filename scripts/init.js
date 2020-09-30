@@ -1,6 +1,6 @@
-const URL_VIVERO = "https://ivangyurcovits.github.io/Vivero/listado.json";
+const URL_VIVERO = "https://ivangyurcovits.github.io/Vivero/scripts/listado.json";
 const USUARIOS_URL = "https://danielk2020.github.io/biblioteca/usuarios.json";
-const COMENTARIOS_URL = "https://ivangyurcovits.github.io/Vivero/coments.json";
+const COMENTARIOS_URL = "https://ivangyurcovits.github.io/Vivero/scripts/coments.json";
 
 
 var getJSONData = function(url) {

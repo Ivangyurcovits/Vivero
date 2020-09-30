@@ -28,7 +28,7 @@ function sortPlantas(criterio, array) {
 
 function verPlanta(id){
     localStorage.setItem('planta', JSON.stringify({plantaId: id}));
-    window.location = 'ver-planta.html';
+    window.location = 'scripts/ver-planta.html';
 }
 
 function showPlantas(array) {
